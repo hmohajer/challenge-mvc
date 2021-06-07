@@ -1,0 +1,11 @@
+<%- include("./Layout/Header") %>
+
+<h4>Edit a Post</h4>
+
+<div class="row">
+    <div class="col-6">
+        <%- include("./common/FeedForm",{btnText:"Submit",formAction:`feed/edit/${post._id}`,post}) %>
+    </div>
+</div>
+
+<%- include("./Layout/Footer") %>

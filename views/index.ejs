@@ -1,0 +1,21 @@
+<%- include("./Layout/Header") %>
+
+<h4>Add a Post</h4>
+
+<div class="row">
+    <div class="col-6">
+        <%- include("./common/FeedForm",{btnText:"Add Post",formAction:"addPost",post:null,err}) %>
+    </div>
+</div>
+
+<% feed.map(post => {%>
+<hr />
+<div class="row">
+    <div class="col-6"><%- include("./common/Post",{post}) %></div>
+    <div class="col-4 alignment-content-end">
+        <div><a href="/feed/<%= post._id  %>">See More...</a></div>
+        <div><%= post.updatedAt %></div>
+    </div>
+</div>
+
+<%}) %> <%- include("./Layout/Footer") %>

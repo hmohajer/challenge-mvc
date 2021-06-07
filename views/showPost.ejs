@@ -1,0 +1,17 @@
+<%- include("./Layout/Header") %>
+
+<div class="row">
+    <div class="col-6"><%- include("./common/Post",{post}) %></div>
+    <div class="col-4 alignment-content-end">
+        <div><%= post.updatedAt %></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6"></div>
+    <div class="col-6">
+        <a type="button" href="/feed/delete/<%= post._id %>" class="btn btn-danger">Delete</a>
+        <a type="button"  href="/feed/edit/<%= post._id %>" class="btn btn-primary">Edit Post</a>
+
+    </div>
+</div>
+<%- include("./Layout/Footer") %>
